@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    //  1,let声明的变量只在它所在的代码块有效。
+    // {
+    //     let a =10;
+    //     var b = 1;
+    // }
+    // console.log(a);
+    // console.log(b)
+
+    /* 2,for循环的计数器，就很合适使用let命令。 */
+
+    // for(let i= 0;i<10;i++){
+    // }
+    // console.log(i);    //i is not defined
+
+    // var a = [];
+    // for (var i = 0; i < 10; i++) {
+    //     a[i] = function () {
+    //         console.log(i);
+    //     };
+    // }
+    // a[6](); // 10
+
+  // 当前的i只在本轮循环中有效，每一次循环的i其实都是一个新的变量
+    //js引擎背部会记住上一轮循环的值，初始化本轮的变量i时，就在上一轮循环的基础上进行计算。
+    // debugger;
+    // var a = [];
+    // for (let i = 0; i < 10; i++) {
+    //     a[i] = function () {
+    //         console.log(i);
+    //     };
+    // }
+    // a[6](); // 6
+
+    /***let不存在变量提升***/
+
+    // var 的情况
+    // console.log(foo); //undefined  变量foo已经存在了，但是没有值，所以会输出undefined .
+    // var foo = 2;
+    //
+    // // let 的情况
+    // console.log(bar); // 变量bar是不存在的  报错ReferenceError
+    // let bar = 2;
+
+
+    // var tmp = new Date();
+    //
+    // function f() {
+    //     console.log(tmp);
+    //     if (false) {
+    //         var tmp = 'hello world';
+    //     }
+    // }
+    //
+    // f(); // undefined
+
+    // function f1() {
+    //      let n = 5;
+    //     if (true) {
+    //         let n = 10;
+    //     }
+    //     console.log(n); // 5
+    // }
+    //
+    // f1()
+
+
+
+
+
+
+</script>
+</html>
